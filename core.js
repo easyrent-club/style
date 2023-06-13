@@ -41,7 +41,8 @@ module.exports = {
   rules: {
     "@typescript-eslint/no-floating-promises": "error",
     "@typescript-eslint/no-explicit-any": "off",
-    "no-empty-function": ["error", { "allow": ["arrowFunctions", "asyncFunctions"] }],
+    "@typescript-eslint/no-empty-interface": "off",
+    "no-empty-function": "off",
     "line-comment-position": [
       "error",
       {
