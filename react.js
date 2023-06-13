@@ -1,5 +1,10 @@
 module.exports = {
   extends: ['./core.js', 'plugin:react/jsx-runtime'],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   rules: {
     'react/jsx-curly-brace-presence': [
       1,
