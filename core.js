@@ -1,3 +1,5 @@
+require("@rushstack/eslint-patch/modern-module-resolution");
+
 /**
  * This is the base configuration for all EasyRent Typescript projects.
  * It should be preferred to use one of the other specific configurations for
