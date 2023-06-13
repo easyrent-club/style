@@ -1,5 +1,5 @@
 {
-  "name": "@easyrent-club/style",
+  "name": "eslint-config-easyrent",
   "version": "1.0.6",
   "peerDependencies": {
     "eslint": ">=8",
