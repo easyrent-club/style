@@ -41,7 +41,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-floating-promises': 'error',
     '@typescript-eslint/no-explicit-any': 'off',
-
+    'no-empty-function': { "allow": ["arrowFunctions"] },
     'line-comment-position': [
       'error',
       {
@@ -55,6 +55,7 @@ module.exports = {
         skipBlankLines: true,
       },
     ],
+    'no-empty-pattern': 0,
     'no-var': 'error',
     'prefer-const': 'error',
     'import/newline-after-import': 'error',
