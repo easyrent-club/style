@@ -7,79 +7,79 @@ require("@rushstack/eslint-patch/modern-module-resolution");
  */
 module.exports = {
   extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
-    'plugin:storybook/recommended',
-    'prettier'
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:storybook/recommended",
+    "prettier"
   ],
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   plugins: [
-    '@typescript-eslint',
-    'unused-imports',
-    'import-helpers',
+    "@typescript-eslint",
+    "unused-imports",
+    "import-helpers",
     "import"
   ],
   root: true,
   settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx']
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
     },
-    'import/resolver': {
+    "import/resolver": {
       typescript: true,
       node: true
     }
   },
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: "latest",
+    sourceType: "module"
   },
   rules: {
-    '@typescript-eslint/no-floating-promises': 'error',
-    '@typescript-eslint/no-explicit-any': 'off',
-    'no-empty-function': ['error', { "allow": ["arrowFunctions"] }],
-    'line-comment-position': [
-      'error',
+    "@typescript-eslint/no-floating-promises": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-empty-function": ["error", { "allow": ["arrowFunctions", "async"] }],
+    "line-comment-position": [
+      "error",
       {
-        position: 'above',
-      },
+        position: "above"
+      }
     ],
-    'spaced-comment': ['error', 'always'],
-    'no-trailing-spaces': [
-      'error',
+    "spaced-comment": ["error", "always"],
+    "no-trailing-spaces": [
+      "error",
       {
-        skipBlankLines: true,
-      },
+        skipBlankLines: true
+      }
     ],
-    'no-empty-pattern': 0,
-    'no-var': 'error',
-    'prefer-const': 'error',
-    'import/newline-after-import': 'error',
-    "import/no-unresolved": 'error',
-    'import/no-cycle': 'error',
-    'import-helpers/order-imports': [
-      'error',
+    "no-empty-pattern": 0,
+    "no-var": "error",
+    "prefer-const": "error",
+    "import/newline-after-import": "error",
+    "import/no-unresolved": "error",
+    "import/no-cycle": "error",
+    "import-helpers/order-imports": [
+      "error",
       {
-        newlinesBetween: 'always',
-        groups: ['module'],
-        alphabetize: { order: 'asc', ignoreCase: true },
-      },
+        newlinesBetween: "always",
+        groups: ["module"],
+        alphabetize: { order: "asc", ignoreCase: true }
+      }
     ],
     // Unused imports handling
-    '@typescript-eslint/no-unused-vars': 'off',
-    'unused-imports/no-unused-imports': 'error',
-    'unused-imports/no-unused-vars': [
-      'warn',
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
       {
-        vars: 'all',
-        varsIgnorePattern: '^_',
-        args: 'after-used',
-        argsIgnorePattern: '^_',
-      },
-    ],
-  },
+        vars: "all",
+        varsIgnorePattern: "^_",
+        args: "after-used",
+        argsIgnorePattern: "^_"
+      }
+    ]
+  }
 };
