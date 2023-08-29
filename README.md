@@ -22,6 +22,3 @@ module.exports = {
   }
 }
 ```
-
-### Rules
-This config incorporates the following rulesets:
